@@ -26,19 +26,45 @@ Easy to extend for cloud storage (AWS S3) or databases.
 
 📂 Project Structure
 
-tiaa-bank-project/
+loanrates-g5/
 
-├── bankrate_loans.py        # Scrapy spider script
+├── loanrates/                   # Main Scrapy project folder
 
-├── bankrate_loans.json      # Latest scraped data
+│   ├── spiders/                 # All spiders & helper scripts
 
-├── bankrate_rates_history.csv  # Historical data
+│   │   ├── data/                # Scraped data outputs
 
-├── requirements.txt         # Python dependencies
+│   │   │   ├── bankrate.json    # Latest scraped data
 
-├── .github/workflows/ci.yml # GitHub Actions workflow
+│   │   │   ├── bankrates.csv    # Historical data (appended daily)
 
-└── README.md
+│   │   │   └── log/             # Logs folder
+
+│   │   ├── append_json_to_csv.py# Script to append JSON to CSV
+
+│   │   ├── bankrate_spider.py   # Main Scrapy spider
+
+│   │   ├── __init__.py
+
+│   │
+
+│   ├── items.py                 # Item definitions for scraped fields
+
+│   ├── middlewares.py           # Custom middlewares
+
+│   ├── pipelines.py             # Data processing pipelines
+
+│   ├── settings.py              # Scrapy project settings
+
+│   └── __pycache__/
+
+│
+
+├── .github/workflows/ci.yml     # GitHub Actions workflow (automation)
+
+├── requirements.txt             # Python dependencies
+
+└── README.md                    # Project documentation
 
 
 
