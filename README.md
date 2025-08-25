@@ -11,6 +11,7 @@ This project scrapes loan and mortgage rate data from financial websites (e.g., 
 💾 Storage → Saves data into JSON and CSV files (with option for S3 in future).
 
 
+
 🚀 Features
 
 Automated scraping of mortgage/loan rates.
@@ -20,6 +21,7 @@ Scheduled runs via GitHub Actions (daily at set IST time).
 Data saved in CSV (historical data) and JSON (latest snapshot).
 
 Easy to extend for cloud storage (AWS S3) or databases.
+
 
 
 📂 Project Structure
@@ -37,6 +39,7 @@ tiaa-bank-project/
 ├── .github/workflows/ci.yml # GitHub Actions workflow
 
 └── README.md
+
 
 
 ⚙️ Installation & Setup
@@ -61,6 +64,7 @@ Output → bankrate_loans.json (latest snapshot)
 Output → bankrate_rates_history.csv (appended daily history)
 
 
+
 🛠️ Automation with GitHub Actions
 
 Workflow runs daily at 10:30 AM IST.
@@ -68,6 +72,7 @@ Workflow runs daily at 10:30 AM IST.
 Executes the Scrapy spider and updates JSON + CSV files.
 
 Workflow file: .github/workflows/ci.yml
+
 
 
 📌 Future Enhancements
