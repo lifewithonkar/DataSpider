@@ -1,7 +1,7 @@
 name: Daily Web Scraper
 on:
   schedule:
-  - cron: '0 5 * * *'   # Runs daily at 10:30 AM IST
+  - cron: '20 5 * * *'   # Runs daily at 10:50 AM IST
   
   workflow_dispatch:        # allows manual trigger
 
